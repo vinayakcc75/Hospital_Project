@@ -1,0 +1,8 @@
+body {
+  /* background: linear-gradient(to left, transparent 0%,cyan 50%,transparent 100%);
+  background: -moz-linear-gradient(to left, transparent 0%,cyan 50%,transparent 100%);
+  background: -webkit-gradient(to left, transparent 0%,cyan 50%,transparent 100%); */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
