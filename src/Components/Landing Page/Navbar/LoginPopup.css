@@ -1,0 +1,54 @@
+.login-container{
+    background-color:white;
+    width:30%;
+    height:50%;
+    display:block;
+    position:fixed;
+    justify-content: center;
+    left:0;
+    top:0;
+    margin-left:35%;
+    border-radius: 2vh;
+    margin-right:35%;
+    margin-top: 10%;
+    box-shadow: 0vh 0vh 1vh 1vh white;
+}
+.login-container hr{
+    width:20%;
+}
+.login-container input{
+    width:60%;
+}
+
+@media (max-width:736px){
+    .login-container{
+        width:60%;
+        height:40%;
+        margin-right:20%;
+        margin-left: 20%;
+        margin-top: 30%;
+    }
+    .login-container input{
+        width:60%;
+    }
+    .heading{
+        font-size:18px
+    }
+    .login-container p{
+        font-size: 10px;
+    }
+}
+
+@media (min-width:736px){
+    .login-container{
+        font-size:15px;
+    }
+    .heading{
+        font-size:18px
+    }
+    
+}
+.recaptcha{
+    justify-content: center;
+    display:flex
+}
