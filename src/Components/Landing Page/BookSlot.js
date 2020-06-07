@@ -31,9 +31,7 @@ let startDateInputProps = {
 };
 
 class BookSlot extends React.Component{
-    constructor(){
-        super();
-    }
+  
     render(){
     return(
         <div>

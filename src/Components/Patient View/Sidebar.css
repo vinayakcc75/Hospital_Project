@@ -1,5 +1,5 @@
 body{
-    margin-top:10%;
+    margin-top: 10%;
 }
 .button-side-bar nav{
     background-color:#ffaf49
@@ -59,7 +59,9 @@ body{
     justify-content: space-evenly;
     flex-direction:column;
 }
-
+.center{
+    justify-content: center;
+}
 .side-links button{
     font-weight:bold;
     font-family: Marker Felt, fantasy;
@@ -68,9 +70,9 @@ body{
     text-decoration: none;
     margin:5px;
     padding:5px;
-    border:2px solid white;
     background-color:transparent;
     transition-duration: 0.4s;
+    border:none;
 }
 
 .side-links button:hover,.hamburger button:hover{

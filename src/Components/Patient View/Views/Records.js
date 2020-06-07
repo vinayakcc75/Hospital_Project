@@ -3,7 +3,7 @@ import React from 'react';
 const Records =()=>{
     return(
         <div className='head'>
-            Records
+         <h1>Records</h1>
         </div>
     );
 }

@@ -3,19 +3,19 @@ import './LoginPopup.css';
 import Backdrop from './Backdrop';
 import google from './google-plus.svg';
 import person from './icons8-person-64.png';
-import {Link} from "react-router-dom";
 import ReCAPTCHA from "react-google-recaptcha";
-//secret :6Lel8P8UAAAAADgd_O85aUsSWW5E5KVuybvPhcD-
-//site key:6Lel8P8UAAAAAP138sOhaPP9rVfjB1A89H3dIbuU
-
 
 class LoginPopup extends React.Component{
     constructor(props){
         super(props)
         this.state={
-            captcha:false
+            captcha:false,
+            user:{
+                password:"",
+                email:""
         }
     }
+}
     onChange=()=>{
         return(
            this.setState({captcha:true})
@@ -26,7 +26,39 @@ class LoginPopup extends React.Component{
     onSubmit = () => {
         const recaptchaValue = this.recaptchaRef.current.getValue();
         this.props.onSubmit(recaptchaValue);
-        }
+
+    }
+    passChange=(event)=>{
+        this.setState(Object.assign(this.state.user,{password:event.target.value}));
+    }
+    emailChange=(event)=>{
+        this.setState(Object.assign(this.state.user,{email:event.target.value}));
+    }
+    
+     verify=()=>{
+    console.log('entered');
+    fetch('http://localhost:8080/api/authenticate', {
+      method: 'post',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        email:this.state.user.email,
+        password:this.state.user.password
+      })
+    })
+    .then(response => response.json())
+    .then(ret => {
+        if(ret.status===true){
+            this.props.giveAccess();
+            this.props.history.push(`/patient/${this.state.email}`);
+            console.log('Successfully Login');
+        } 
+        else{
+          alert('Invalid Email or Password');
+          window.location.reload();
+        }   
+    })
+    console.log('exit')
+    }
     render(){
     const {onRouteChange}=this.props;
      return(
@@ -36,22 +68,15 @@ class LoginPopup extends React.Component{
         <img src={person} alt="google" height='40' width='40'/>
                 <h1 className="heading">LOGIN </h1>
             <form method='PUT'>
-                <input type="text" placeholder="Enter Username"></input><br/><br/>
-                <input type="password" placeholder="Enter Password"></input>
+
+                <input type="email" placeholder="Enter Email"
+                onChange={this.emailChange}></input><br/><br/>
+
+                <input type="password" placeholder="Enter Password"
+                onChange={this.passChange}></input>
+
                 <a href="#"><p>Forgot password?</p></a>
-                <form className="recaptcha" onSubmit={this.onSubmit} >
-                    <ReCAPTCHA
-                        ref={this.recaptchaRef}
-                        sitekey="6Lel8P8UAAAAAP138sOhaPP9rVfjB1A89H3dIbuU"
-                        onChange={this.onChange}
-                    />
-                 </form>
-                    {(this.state.captcha===true)?(
-                     <Link to='/patient'>
-                        <button>Login</button>
-                    </Link>):<div></div>
-                }
-                 
+                <button type="button" onClick={this.verify} >Login</button>
                 <hr/>
                 <p>or</p>
                 <p>Sign up with</p>
@@ -60,6 +85,7 @@ class LoginPopup extends React.Component{
             </form>
         </div>
         </div>
-    )}
-}
+    )
+   }
+    }
 export default LoginPopup;

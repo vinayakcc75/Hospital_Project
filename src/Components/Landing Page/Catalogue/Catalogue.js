@@ -6,7 +6,7 @@ import './Catalogue.css';
 const Catalogue=()=>{
     return(
         <div >
-        <Slider className="toggling-pics" dots  autoplay autoplayScroll='infinite'
+        <Slider className="toggling-pics" dots  autoplay autoplayScroll='10'
             autoplaySpeed={2000} arrows={false}> 
             <img src='https://www.healthleadersmedia.com/sites/hlmp/files/medical-mask-shutterstock_268385390.jpg' alt="1"/>
             <img src="https://study.com/cimages/videopreview/videopreview-full/gowbyydu58.jpg" alt="2"/>

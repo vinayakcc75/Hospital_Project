@@ -20,7 +20,7 @@ class Sidebar extends React.Component{
             </a>
             {(this.props.baropen===true)?(
             <nav className="sidebar">
-            <a className="cross" onClick={openBar}><img src={x} width='25' height='22'/></a>
+            <a className="cross"  onClick={openBar}><img src={x} width='25' height='22'/></a>
             <div className="side-links">
                 <Link to='/profile'>
                     <button >Profile</button>
@@ -37,6 +37,7 @@ class Sidebar extends React.Component{
             <div className="normal-side-bar">
             <nav className="sidebar">
             <div className="side-links">
+                
                 <Link to='/profile'>
                     <button >Profile</button>
                 </Link>

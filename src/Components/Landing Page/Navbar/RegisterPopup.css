@@ -1,15 +1,15 @@
 .register-container{
     background-color: white;
-    width:30%;
-    height:50%;
+    width:40%;
+    height:55%;
     display:block;
     position:fixed;
     justify-content: center;
     left:0;
     top:0;
-    margin-left:35%;
+    margin-left:30%;
     border-radius: 2vh;
-    margin-right:35%;
+    margin-right:30%;
     margin-top: 10%;
     box-shadow: 0vh 0vh 1vh 1vh white;
 }
@@ -43,7 +43,6 @@
         height:50%;
         margin-right:20%;
         margin-left: 20%;
-        margin-top: 30%;
     }
     .register-container input{
         width:60%;

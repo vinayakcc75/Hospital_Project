@@ -4,6 +4,7 @@ import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
 import History from './Views/History';
 import Profile from './Views/Profile';
 import Records from './Views/Records';
+import './PatientView.css';
 class PatientView extends React.Component{
     constructor(){
         super();
@@ -26,7 +27,7 @@ class PatientView extends React.Component{
                 <Router>
                 <Sidebar openBar={this.openBar} baropen={this.state.baropen}/>
                 <Switch>
-                    <Route  path='/patient' component={this.welcome}></Route>
+                    <Route  path='/patient/:id' component={this.welcome}></Route>
                     <Route  path='/profile' component={Profile}></Route>
                     <Route  path='/records' component={Records}></Route>
                     <Route  path='/history' component={History}></Route>

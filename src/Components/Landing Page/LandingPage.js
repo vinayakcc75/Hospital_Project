@@ -8,21 +8,37 @@ import Facilities from './Facilities';
 import BookSlot from './BookSlot';
 import PatientView from '../Patient View/PatientView';
 import MainNav from './MainNav';
-import Navbar from './Navbar/Navbar';
+import './footer.css';
 
-import  {  Fragment } from 'react'
-import './LandingPage.css';
 class LandingPage extends Component{
     constructor(){
         super();
         this.state={
             register:false,
             login:false,
+            access:false,
+            user:{
+                username:"",
+                phone:"",
+                email:"",
+                type:""
+            }
         }
+    }
+    giveAccess=()=>{
+        this.setState({access:true});
+    }
+    loadUser=(data)=>{
+        this.setState({user:{
+            username:data.username,
+            phone:data.phone,
+            password:data.password,
+            email:data.email,
+            type:data.type
+        }})
     }
     Foot=()=>{
         return(
-            <Fragment>
                 <div className="foot">
                     <p>CONTACT US</p>
                     <p className="contactus">
@@ -31,7 +47,6 @@ class LandingPage extends Component{
                         Address : Delhi, India<br/>
                     </p>
                 </div>
-            </Fragment>
         );
     }
     onRouteChange=(route)=>{
@@ -48,14 +63,15 @@ class LandingPage extends Component{
             this.setState({register:false});
           }
     }
-    Login=()=>{
+    Login=(props)=>{
         return(
             <div>
             {
                 (this.state.login===true)?
                 <div>
                     <Catalogue/>
-                    <LoginPopup hideNavbar={this.hideNavbar} onRouteChange={this.onRouteChange}/>
+                    <LoginPopup {...props} access={this.state.access}
+                     giveAccess={this.giveAccess} onRouteChange={this.onRouteChange}/>
                 </div>
                 : <div><Catalogue/></div>
             }
@@ -69,7 +85,7 @@ class LandingPage extends Component{
                 (this.state.register===true)?
                 <div>
                     <Catalogue/>
-                    <RegisterPopup onRouteChange={this.onRouteChange}/>  
+                    <RegisterPopup loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>  
                 </div>
                 : <div><Catalogue/></div>
             }
@@ -83,19 +99,26 @@ class LandingPage extends Component{
         <MainNav onRouteChange={this.onRouteChange}/>
         <Switch>
                 <Route path="/" exact component={Catalogue} />
-                <Route path="/login" component={this.Login}/>
+                <Route  path="/login"  render={(routeProps) => <this.Login {...routeProps}/>}/>
                 <Route path="/register" component={this.Register}/>
-                <Route path='/aboutus' component={AboutUs}/>
+                <Route path="/aboutus" component={AboutUs}/>
                 <Route path='/facilities' component={Facilities}/>
                 <Route path='/bookslot' component={BookSlot}/>
-                <Route path='/patient' component={PatientView}/>
+                {this.state.access===true&&
+                <Route path='/patient/:id' render={(routeProps) => <PatientView {...routeProps}/>}/>}
         </Switch>
         </Router>
-        <div className="content">
-
-        </div>
-       <footer className="footer">
-            <this.Foot/>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <footer className="foot">
+            <p>CONTACT US</p>
+            <p className="contactus">
+                        Telephone : +21 2289373, +21 2341245<br/>
+                        Email : hospital@gmail.com<br/>
+                        Address : Delhi, India<br/>
+            </p>
+            
         </footer>
         </div>
     );
