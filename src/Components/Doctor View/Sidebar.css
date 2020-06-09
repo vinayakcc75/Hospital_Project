@@ -1,0 +1,100 @@
+body{
+    margin-top: 10%;
+}
+.button-side-bar nav{
+    background-color:#ffaf49
+}
+.normal-side-bar nav{
+    background-color:#ffaf49
+}
+.homepic{
+    position:absolute;
+    top:0;
+    right:0;
+    display:flex;
+    margin:10px;
+}
+.hamburger {
+    left:0;
+    position:absolute;
+    top:0;
+    font-size:18px;
+    margin:10px;
+}
+.hamburger button{
+    font-size: 15px;
+}
+.button-side-bar button{
+    font-weight:bold;
+    color: black;
+    text-shadow:silver;
+    text-decoration: none;
+    margin:5px;
+    padding:5px;
+    border:0.5px black solid;
+    background-color:transparent;
+    transition-duration: 0.4s;
+}
+.sidebar button{
+    font-size:15px;
+    text-shadow: 1px 1px silver;
+}
+.cross{
+    margin-left:35%;
+    position:absolute;
+    cursor:pointer
+}
+.sidebar{
+    display:flex;
+    top:0;
+    left:0;
+    position:fixed;
+    justify-content: center;
+    height:100%;
+    width:20%;
+     box-shadow: 0vh 0vh 1vh 1vh grey;
+}
+.side-links{
+    display:flex;    
+    justify-content: space-evenly;
+    flex-direction:column;
+}
+.center{
+    justify-content: center;
+}
+.side-links button{
+    font-weight:bold;
+    font-family: Marker Felt, fantasy;
+    color: black;
+    text-shadow:silver;
+    text-decoration: none;
+    margin:5px;
+    padding:5px;
+    background-color:transparent;
+    transition-duration: 0.4s;
+    border:none;
+}
+
+.side-links button:hover,.hamburger button:hover{
+    color:black;
+    transform: scale(1.1);
+    cursor:pointer;
+    background-color: white;
+}
+.homepic:hover{
+    transform: scale(1.1);
+    cursor:pointer;
+}
+.homepic:active,.side-links button:active,.hamburger button:hover{
+    color:red;
+}
+@media (min-width:768px){
+    .button-side-bar nav{
+        display:none;
+    }
+}
+@media (max-width:768px){
+    .normal-side-bar nav{
+        display:none;
+    }
+}

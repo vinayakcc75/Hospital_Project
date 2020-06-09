@@ -77,10 +77,10 @@ class RegisterPopup extends React.Component{
             <h1 className="heading">REGISTER </h1><br/>
             <form method='PUT'>
                 <div className="user-selection">
-                <label for="doctor">Doctor</label>
+                <label htmlFor="doctor">Doctor</label>
                 <input onClick={()=>this.operatorChange('doctor')}
                 type="radio" name="user" value="doctor" />
-                <label for="patient">Patient</label>
+                <label htmlFor="patient">Patient</label>
                 <input type="radio" onClick={()=>this.operatorChange('patient')}
                  name="user" value="patient" />
                 </div>

@@ -7,6 +7,8 @@ import AboutUs from './AboutUs';
 import Facilities from './Facilities';
 import BookSlot from './BookSlot';
 import PatientView from '../Patient View/PatientView';
+import DoctorView from '../Doctor View/DoctorView';
+
 import MainNav from './MainNav';
 import './footer.css';
 
@@ -21,7 +23,8 @@ class LandingPage extends Component{
                 username:"",
                 phone:"",
                 email:"",
-                type:""
+                user_type:"",
+                user_id:"",
             }
         }
     }
@@ -29,13 +32,13 @@ class LandingPage extends Component{
         this.setState({access:true});
     }
     loadUser=(data)=>{
-        this.setState({user:{
+        this.setState(Object.assign(this.state.user,{
             username:data.username,
             phone:data.phone,
-            password:data.password,
             email:data.email,
-            type:data.type
-        }})
+            user_type:data.user_type,
+            user_id:data.user_id,
+        }))
     }
     Foot=()=>{
         return(
@@ -70,7 +73,7 @@ class LandingPage extends Component{
                 (this.state.login===true)?
                 <div>
                     <Catalogue/>
-                    <LoginPopup {...props} access={this.state.access}
+                    <LoginPopup {...props} loadUser={this.loadUser} access={this.state.access}
                      giveAccess={this.giveAccess} onRouteChange={this.onRouteChange}/>
                 </div>
                 : <div><Catalogue/></div>
@@ -105,7 +108,9 @@ class LandingPage extends Component{
                 <Route path='/facilities' component={Facilities}/>
                 <Route path='/bookslot' component={BookSlot}/>
                 {this.state.access===true&&
-                <Route path='/patient/:id' render={(routeProps) => <PatientView {...routeProps}/>}/>}
+                <Route path='/patient/:id' render={(routeProps) => <PatientView user={this.state.user} {...routeProps}/>}/>}
+                {this.state.access===true&&
+                <Route path='/doctor/:id' render={(routeProps) => <DoctorView user={this.state.user} {...routeProps}/>}/>}
         </Switch>
         </Router>
         <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>

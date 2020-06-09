@@ -1,0 +1,12 @@
+.entry input{
+    width:30%;
+    padding:10px;
+    height:auto
+}
+.entry button{
+    padding:8px;
+    font-size:12px;
+    background-color:black;
+    color:white;
+    font-weight: bold;
+}

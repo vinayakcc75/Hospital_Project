@@ -1,0 +1,31 @@
+.main{
+    display:flex;
+    justify-content: center;
+    width: 60%;
+    margin-left: 20%;
+    margin-right:20%;
+    padding: 1%;
+    text-align: center;
+}
+.main table {
+    justify-content: center;
+}
+.main img{
+    margin-left:45%;
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+}
+.main button{
+    margin-left:50%;
+    width:140px;
+    background-color: transparent;
+    color:black;
+    font-weight: bold;
+
+}
+.main button:hover{
+    transition: 0.2s;
+    transform: scale(1.05);
+    font:15px
+}

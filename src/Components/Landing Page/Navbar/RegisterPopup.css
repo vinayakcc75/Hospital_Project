@@ -26,16 +26,25 @@
     justify-content:center;
     margin-left:20%;
 }
-
-
 .register-container input{
     width:60%;
-    padding:5px;
-
+    font-size:12px;
+    padding:5px
+}
+.register-container button{
+    color:black;
+    font-size:12px;
+    background-color: transparent;
+    font-weight: bold;
+    border:1px solid black;
 }
 .register-container button:hover{
+    transform: scale(1.05);
+    transition:0.6s;
     cursor:pointer;
+
 }
+
 
 @media (max-width:736px){
     .register-container{
@@ -45,8 +54,8 @@
         margin-left: 20%;
     }
     .register-container input{
-        width:60%;
-        padding :1px;
+        width:50%;
+        padding :5px;
     }
     .register-container form{
         font-size:12px;

@@ -9,13 +9,13 @@ class MainNav extends Component {
         return (
         <Fragment>
             {(this.props.location.pathname === '/'||
-                this.props.location.pathname === '/aboutus'||
+            this.props.location.pathname === '/aboutus'||
             this.props.location.pathname === '/facilities'||
             this.props.location.pathname === '/bookslot'||
             this.props.location.pathname === '/login'||
             this.props.location.pathname === '/register')
             && <Navbar onRouteChange={onRouteChange}/>}
-            <main>{this.props.children}</main>
+            {/* <main>{this.props.children}</main> */}
         </Fragment>
         )
     }

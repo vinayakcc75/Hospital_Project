@@ -1,11 +1,12 @@
 import React from 'react';
 import Sidebar from './Sidebar';
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
-import History from './Views/History';
+import PatientHistory from './Views/PatientHistory';
 import Profile from './Views/Profile';
-import Records from './Views/Records';
-import './PatientView.css';
-class PatientView extends React.Component{
+import NewEntry from './Views/NewEntry';
+import TimeOff from './Views/TimeOff';
+import './DoctorView.css';
+class DoctorView extends React.Component{
     constructor(props){
         super(props);
         this.state={
@@ -18,7 +19,7 @@ class PatientView extends React.Component{
     welcome=()=>{
         return(
         <div className="welcome">
-        <h1>WELCOME !</h1>
+        <h1>WELCOME Doctor!</h1>
         </div>
     )}
     render(){
@@ -27,10 +28,11 @@ class PatientView extends React.Component{
                 <Router>
                 <Sidebar openBar={this.openBar} baropen={this.state.baropen}/>
                 <Switch>
-                    <Route  path='/patient/:id' component={this.welcome}></Route>
-        <Route  path='/profile' render={()=><Profile user={this.props.user}/>}></Route>
-                    <Route  path='/records' component={Records}></Route>
-                    <Route  path='/history' component={History}></Route>
+                    <Route  path='/doctor/:id' component={this.welcome}></Route>
+                    <Route  path='/docprofile' render={()=><Profile user={this.props.user}/>}></Route>
+                    <Route  path='/timeoff' component={TimeOff}></Route>
+                    <Route  path='/newentry' component={NewEntry}></Route>
+                    <Route  path='/patienthistory' component={PatientHistory}></Route>
                 </Switch>
                 </Router>
             </div>
@@ -38,4 +40,4 @@ class PatientView extends React.Component{
     }
 }
 
-export default PatientView;
+export default DoctorView;
