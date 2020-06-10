@@ -1,0 +1,14 @@
+.main{
+    width: 80%;
+    margin-left: 20%;
+    padding: 1%;
+    border: 1px solid #000000;
+    text-align: center;
+}
+
+.main img{
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+}
+
