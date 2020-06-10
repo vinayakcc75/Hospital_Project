@@ -7,7 +7,7 @@ const arr=[1,2,3,4,5,6,7,8,9,10];
 
 function Doctor(props){
   return (
-    <div className="card swiper-slide">
+    <div className="aboutUs-card swiper-slide">
       <img src={doc} width="80" height="80" alt="Doctor's pic" /><br/>
       <a href="#">{props.name}</a>
       <h4>{props.designation}</h4>
@@ -49,7 +49,7 @@ class  People extends React.Component{
   
 function Achievement(props){
   return (
-    <div className="card swiper-slide">
+    <div className="aboutUs-card swiper-slide">
       <img src={doc} width="80" height="80" alt="Conent" />
       <h3>{props.heading}</h3>
       <a href="#">{props.link}</a>
@@ -118,7 +118,7 @@ class AboutUs extends React.Component{
 
   render(){
     return(
-      <div>
+      <div className="aboutUs-main">
         <OurApp/>
       </div>
     );

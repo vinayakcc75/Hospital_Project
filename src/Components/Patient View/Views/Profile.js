@@ -4,7 +4,8 @@ import dp from './dp.jfif'
 
 const Profile =()=>{
     return(
-        <div className="main">
+    <div className="profile-wraper">
+        <div className="profile-main">
             <table>
                 <tr> 
                     <td><h1>Your Profile</h1></td>
@@ -52,6 +53,7 @@ const Profile =()=>{
                 </tr>
             </table>
         </div>
+    </div>    
     );
 }
 
