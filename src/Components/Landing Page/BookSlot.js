@@ -35,7 +35,6 @@ class BookSlot extends React.Component{
     render(){
     return(
         <div>
-            <br/><br/>
         <h1>SLOT BOOKING</h1>
         <form style={{marginLeft:'20%',justifyContent:'center', width:'60%'}} method='PUT'>
         {'Email : '}<input type="text" placeholder="Enter Full Name" name="email"></input>

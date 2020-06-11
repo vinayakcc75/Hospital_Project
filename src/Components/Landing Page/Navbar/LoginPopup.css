@@ -1,7 +1,7 @@
 .login-container{
     background-color:white;
     width:40%;
-    height:60%;
+    height:400px;
     display:block;
     position:fixed;
     justify-content: center;
@@ -36,7 +36,7 @@
 @media (max-width:736px){
     .login-container{
         width:60%;
-        height:50%;
+        height:330px;
         margin-right:20%;
         margin-left: 20%;
     }

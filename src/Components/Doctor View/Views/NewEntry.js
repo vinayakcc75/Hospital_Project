@@ -3,13 +3,14 @@ import './NewEntry.css'
 const NewEntry =()=>{
     return(
         <div className="entry">
+        <br/>
          <h1>New Entry</h1>
          <form>
              <br/><br/>
-            <input type="number" placeholder="Enter Patient Id"></input><br/><br/>
-            <input type="text" placeholder="Enter Patient Name"></input><br/><br/>
-            <input type="text" placeholder="Symptoms"></input><br/><br/>
-            <input type="text" placeholder="Medications Given"></input><br/><br/>
+            Patient Id   : <input type="number" ></input><br/><br/><br/>
+            {'Patient Name : '}<input type="text" ></input><br/><br/><br/>
+            {'Diagnosis    : '} <span className="span"  contenteditable="true" /><br/><br/><br/>
+            {'Prescription : '}<span className="span"  contenteditable="true" /><br/><br/><br/>
             <button type="button">Submit</button>
          </form>
         </div>

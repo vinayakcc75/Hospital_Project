@@ -7,7 +7,7 @@ class Sidebar extends React.Component{
     render(){
         const {openBar} =this.props;
         return(
-            <div className="full-sidebar">
+            <div className="doctor-sidebar">
             <div className="button-side-bar">
             <div className="hamburger">
             <button  onClick={openBar}>

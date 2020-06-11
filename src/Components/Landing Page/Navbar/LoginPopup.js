@@ -81,6 +81,8 @@ class LoginPopup extends React.Component{
         <Backdrop onRouteChange={onRouteChange}/>
         <div className="login-container">
         <img src={person} alt="google" height='40' width='40'/>
+        <br></br>
+
                 <h1 className="heading">LOGIN </h1>
             <form method='PUT'>
 

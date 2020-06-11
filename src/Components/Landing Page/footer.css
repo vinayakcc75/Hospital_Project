@@ -1,12 +1,21 @@
+ html{
+     height:100%;
+ }
+ body{
+    margin-top:100px;
+    min-height: 100%;
+
+}
 footer{
-    /* margin-top:60vh; */
+    /* margin-top:60vh;  */
     background-color: rgb(37, 37, 37);
     color:white;
+    height:200px;
     position:absolute;
-    height:20%;
     width:100%;
+    bottom:0;
     left:0;
 }
 .foot p{
     font-weight: bold;
-}
+} 

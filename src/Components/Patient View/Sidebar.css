@@ -1,30 +1,32 @@
-body{
-    margin-top: 10%;
+footer{
+    top:130%;
 }
-.button-side-bar nav{
-    background-color:#ffaf49
+.normal-side-bar{
+    height:120%;
 }
-.normal-side-bar nav{
-    background-color:#ffaf49
+.patient-sidebar .button-side-bar nav{
+    background-color:#ff8d00;
+    margin-top:10vh;
 }
-.homepic{
+.patient-sidebar .normal-side-bar nav{
+    background-color:#ff8d00;
+    margin-top:10vh;
+}
+.patient-sidebar .homepic{
     position:absolute;
-    top:0;
+    top:85px;
     right:0;
-    display:flex;
-    margin:10px;
 }
-.hamburger {
+.patient-sidebar .hamburger {
     left:0;
     position:absolute;
-    top:0;
-    font-size:18px;
-    margin:10px;
+    font-size:15px;
+    top:80px
 }
-.hamburger button{
+.patient-sidebar .hamburger button{
     font-size: 15px;
 }
-.button-side-bar button{
+.patient-sidebar .button-side-bar button{
     font-weight:bold;
     color: black;
     text-shadow:silver;
@@ -35,34 +37,37 @@ body{
     background-color:transparent;
     transition-duration: 0.4s;
 }
-.sidebar button{
+.patient-sidebar .sidebar button{
     font-size:15px;
     text-shadow: 1px 1px silver;
 }
-.cross{
+.patient-sidebar .cross{
     margin-left:35%;
     position:absolute;
     cursor:pointer
 }
-.sidebar{
+.patient-sidebar .sidebar{
     display:flex;
+    height:120%;
     top:0;
     left:0;
-    position:fixed;
+    position:absolute;
     justify-content: center;
-    height:100%;
     width:20%;
-     box-shadow: 0vh 0vh 1vh 1vh grey;
+    border:3px solid black;
+    border-top:none;
+    border-left:none;
 }
-.side-links{
+.patient-sidebar .side-links{
+    height:80%;
     display:flex;    
     justify-content: space-evenly;
     flex-direction:column;
 }
-.center{
+.patient-sidebar .center{
     justify-content: center;
 }
-.side-links button{
+.patient-sidebar .side-links button{
     font-weight:bold;
     font-family: Marker Felt, fantasy;
     color: black;
@@ -75,26 +80,29 @@ body{
     border:none;
 }
 
-.side-links button:hover,.hamburger button:hover{
+.patient-sidebar .side-links button:hover,.patient-sidebar .hamburger button:hover{
     color:black;
     transform: scale(1.1);
     cursor:pointer;
     background-color: white;
 }
-.homepic:hover{
+.patient-sidebar .homepic:hover{
     transform: scale(1.1);
     cursor:pointer;
 }
-.homepic:active,.side-links button:active,.hamburger button:hover{
+.patient-sidebar .homepic:active,.patient-sidebar side-links button:active,.patient-sidebar .hamburger button:hover{
     color:red;
 }
 @media (min-width:768px){
-    .button-side-bar nav{
+    .patient-sidebar .button-side-bar nav{
+        display:none;
+    }
+    .patient-sidebar .hamburger{
         display:none;
     }
 }
 @media (max-width:768px){
-    .normal-side-bar nav{
+    .patient-sidebar .normal-side-bar nav{
         display:none;
     }
 }

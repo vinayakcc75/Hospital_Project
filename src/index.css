@@ -4,9 +4,7 @@ body {
   background: -webkit-gradient(to left, transparent 0%,cyan 50%,transparent 100%); */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image:url(https://circleofcare.org/wp-content/uploads/2014/09/blue-css-background-gradient-9.jpg);
-  background-size: cover;
-  background-repeat: none;
-  font-family: Marker Felt, fantasy;
+  margin-top:100px;
+  font-family: 'Times New Roman', Times, serif;
 }
 

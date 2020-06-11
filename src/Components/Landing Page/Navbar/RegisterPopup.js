@@ -74,6 +74,7 @@ class RegisterPopup extends React.Component{
         <Backdrop onRouteChange={onRouteChange}/>
         <div className="register-container" >
         <img src={person} alt="google" height='40' width='40'/>
+        <br/>
             <h1 className="heading">REGISTER </h1><br/>
             <form method='PUT'>
                 <div className="user-selection">

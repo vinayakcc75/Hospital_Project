@@ -1,7 +1,7 @@
 .register-container{
     background-color: white;
     width:40%;
-    height:55%;
+    height:400px;
     display:block;
     position:fixed;
     justify-content: center;
@@ -19,8 +19,6 @@
 .register-container label {
     margin-right: -25%;
   }
-
-
 .user-selection{
     display:flex;
     justify-content:center;
@@ -49,7 +47,7 @@
 @media (max-width:736px){
     .register-container{
         width:60%;
-        height:50%;
+        height:350px;
         margin-right:20%;
         margin-left: 20%;
     }

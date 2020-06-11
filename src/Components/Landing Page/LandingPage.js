@@ -8,8 +8,7 @@ import Facilities from './Facilities';
 import BookSlot from './BookSlot';
 import PatientView from '../Patient View/PatientView';
 import DoctorView from '../Doctor View/DoctorView';
-
-import MainNav from './MainNav';
+import NavBar from './Navbar/Navbar';
 import './footer.css';
 
 class LandingPage extends Component{
@@ -99,7 +98,7 @@ class LandingPage extends Component{
     return(
         <div className="landing">
         <Router >
-        <MainNav onRouteChange={this.onRouteChange}/>
+        <NavBar onRouteChange={this.onRouteChange}/>
         <Switch>
                 <Route path="/" exact component={Catalogue} />
                 <Route  path="/login"  render={(routeProps) => <this.Login {...routeProps}/>}/>
@@ -113,9 +112,6 @@ class LandingPage extends Component{
                 <Route path='/doctor/:id' render={(routeProps) => <DoctorView user={this.state.user} {...routeProps}/>}/>}
         </Switch>
         </Router>
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
         <footer className="foot">
             <p>CONTACT US</p>
             <p className="contactus">

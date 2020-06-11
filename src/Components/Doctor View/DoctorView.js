@@ -19,7 +19,8 @@ class DoctorView extends React.Component{
     welcome=()=>{
         return(
         <div className="welcome">
-        <h1>WELCOME Doctor!</h1>
+            <br/><br/>
+        <h3>WELCOME Doctor!</h3>
         </div>
     )}
     render(){
