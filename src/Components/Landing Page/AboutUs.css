@@ -1,20 +1,10 @@
-body{
-  margin-top:8%;
+.aboutUs-main h1{
+  text-align:center;
 }
 
- h1{
-   text-align:center;
- }
- 
- .card{
-   padding:10px;
-   border:1px solid #000000;
- }
- .containerr{
-   display: flex;
-   justify-content:space-around;
-   overflow-x: auto;
- }
- .containerr::-webkit-scrollbar {
-   display: none;
- }
+.aboutUs-card{
+  padding: 10px;
+  border:1px solid #000000;
+  border-radius: 5%;
+}
+
