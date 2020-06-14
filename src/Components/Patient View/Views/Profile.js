@@ -3,12 +3,6 @@ import './Profile.css'
 import dp from './dp.jfif'
 
 class Profile extends React.Component{
-
-
-  handleOver(){
-    console.log("Over");
-  }
-
   render(){
     return(
       <div className="profile-main-wraper">
@@ -21,7 +15,7 @@ class Profile extends React.Component{
         <div className="block-wraper">
             <div>
               <div>
-                <img src={dp} alt="Profile Pic" onMouseOver={this.handleOver}/>
+                <img src={dp} alt="Profile Pic" /> 
               </div>
             </div>
         </div>
