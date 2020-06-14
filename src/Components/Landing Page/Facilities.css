@@ -1,5 +1,5 @@
 body{
-    margin-top: 8%;
+    margin-top: 7%;
 }
 .facility-wraper{
     text-align: center;
@@ -7,6 +7,7 @@ body{
 
 .facility-main{
     display: inline-block;
+    
 }
 
 .facility-main h1{
@@ -19,6 +20,7 @@ body{
     height:300px;
     margin:10px;
     padding:10px;
+    
 }
 
 .facility-card img{

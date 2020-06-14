@@ -1,10 +1,35 @@
 .aboutUs-main h1{
   text-align:center;
+  font-size: 40px;
+}
+
+.aboutUs-main p{
+  font-size: 20px;
 }
 
 .aboutUs-card{
   padding: 10px;
+  margin: 10px;
   border:1px solid #000000;
-  border-radius: 5%;
+  width: 450px;
+  height: 300px;
+}
+
+.aboutUs-card img{
+  width: 300px;
+  height:200px;
+}
+
+
+.aboutUs-main{
+  padding: 10px;
+}
+
+.people-main{
+  display:inline-block;
+}
+
+.people-wraper{
+  text-align: center;
 }
 
